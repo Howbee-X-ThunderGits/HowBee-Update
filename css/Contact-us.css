@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fasthand&family=Felipa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fasthand&family=Felipa&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,16 +8,15 @@
 body {
   overflow-x: hidden;
 }
-  /* height: 100vh; */
+/* height: 100vh; */
 
-.container{
+.container {
   width: 100vw;
 
   position: relative;
   overflow: hidden;
   height: 100%;
   padding: 20px;
-
 }
 .top-content {
   height: fit-content;
@@ -35,32 +34,29 @@ body {
   width: fit-content;
 }
 
- .top-content  span {
+.top-content span {
   color: #ffdc2e;
-} 
+}
 
-.top-content  .top-content-heading-p {
+.top-content .top-content-heading-p {
   font-family: "Fasthand", sans-serif;
   font-size: 30px;
   position: absolute;
   font-weight: 200;
   left: 167px;
   top: 66px;
-} 
-.top-content  .right-text-contact-us{
+}
+.top-content .right-text-contact-us {
   font-family: "Fasthand", sans-serif;
   font-size: 30px;
   font-weight: 200;
-
 }
 
-
-
-
 .vertical-hr {
+  position: relative;
   transform: rotate(90deg);
   z-index: 10;
-  right: 40px;
+  left: 50px;
 }
 
 .upside-text {
@@ -71,11 +67,10 @@ body {
   font-weight: 700;
   justify-content: space-between;
   align-items: center;
-  padding:30px ;
+  padding: 30px;
 }
 
 .right-upside {
-
   width: fit-content;
 }
 
@@ -88,8 +83,6 @@ body {
   padding-left: 30px;
   z-index: 20;
 }
-
-
 
 .bee {
   position: relative;
@@ -150,7 +143,6 @@ body {
   animation: imgMove 2s ease-out forwards;
 }
 
-
 .text-right {
   width: 50%;
 }
@@ -164,26 +156,24 @@ body {
   align-items: center;
 }
 
-.text-under-form-container{
+.text-under-form-container {
   width: fit-content;
 }
 
-.text-under-form-container  {
+.text-under-form-container {
   font-family: "Fasthand", sans-serif;
   color: #ff9315;
   font-size: 70px;
   text-align: start;
 }
 
-.text-right .form-container .text-under-form-container  span {
+.text-right .form-container .text-under-form-container span {
   color: #000000;
-  font-family: "Felipa", serif;
+  font-family: "Fasthand", serif;
   font-weight: 200;
 }
 
-
 .form {
-  
   width: 100%;
   height: auto;
 }
@@ -196,6 +186,11 @@ body {
   width: 250px;
   outline: none;
   padding: 10px 0;
+}
+
+.form input::placeholder {
+  color: #000000;
+  font-size: 20px;
 }
 
 .btn {
@@ -302,8 +297,8 @@ body {
   }
 
   .img-right {
-    background-size: 35rem; /* Adjust size for tablets*/ 
-    top: 0; 
+    background-size: 35rem; /* Adjust size for tablets*/
+    top: 0;
   }
 
   .top-content {
@@ -359,8 +354,6 @@ body {
     margin-left: 29px;
   }
 
-
-
   .connect {
     top: -33px;
   }
@@ -393,8 +386,8 @@ body {
 
 @media (max-width: 576px) {
   .img-right {
-    background-size: 25rem; 
-    top: 0; 
+    background-size: 25rem;
+    top: 0;
   }
   .container .middle-part {
     margin-top: 15%;
@@ -420,7 +413,7 @@ body {
   .imgs .img-right img {
     left: 81px;
     top: -18px;
-  } 
+  }
 }
 
 @keyframes imgMove {
