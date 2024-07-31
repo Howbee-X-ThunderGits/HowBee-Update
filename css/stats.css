@@ -59,7 +59,7 @@ body {
     bottom: 12%;
     left: 0;
     object-fit: cover;
-    z-index: 1000;
+    z-index: 3000;
   }
 
   .column1img {
@@ -68,7 +68,6 @@ body {
     height: 63%;
     left: 0;
     bottom: 0%;
-    z-index: 2;
   }
 
   .column1 .hex1 {
@@ -123,7 +122,7 @@ body {
     width: 30%;
     bottom: 0;
     left: 34%;
-    z-index: 40;
+    z-index: 2000;
   }
 
   .column2img {
@@ -186,7 +185,7 @@ body {
     width: 15%;
     bottom: 12%;
     right: 4%;
-    z-index: 10;
+    z-index: 1000;
   }
 
   .column3img {
@@ -195,7 +194,6 @@ body {
     height: 63%;
     right: 40%;
     bottom: 0;
-    z-index: 1;
   }
 
   .hex3 {
@@ -980,7 +978,11 @@ body {
 
 .statsContainer:hover .column1,
 .statsContainer:hover .column2,
-.statsContainer:hover .column3,
+.statsContainer:hover .column3 {
+  animation: grow 2s ease-in-out forwards;
+  animation-iteration-count: 1;
+}
+
 .statsContainer:hover .column4 {
   animation: grow 2s ease-in-out forwards;
   animation-iteration-count: 1;
