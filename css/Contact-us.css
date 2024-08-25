@@ -131,10 +131,10 @@ body {
 }
 
 .img-right img {
-  width: 80%;
+  width: 100%;
   position: relative;
   margin-top: 0;
-  left: 181px;
+  left: 91px;
   top: -100px;
   z-index: 100;
 }
@@ -202,10 +202,13 @@ body {
 .btn button {
   background-color: #ffdc2e;
   border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  margin-left: 120px;
+  padding: 5px 23px;
+  border-radius: 5px;
+  margin-left: 74px;
   cursor: pointer;
+  color: #000000;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .btn button:hover {
@@ -215,8 +218,9 @@ body {
 .so-icons {
   margin-top: 40px;
   display: flex;
-  gap: 3px;
-  margin-left: 34px;
+  font-size: 23px;
+  gap: 1.5px;
+  margin-left: 10px;
 }
 
 .so-icons a {
@@ -312,9 +316,9 @@ body {
     left: 100px;
   }
 
-  .text-right {
-    /* left: -84px; */
-  }
+  /* .text-right {
+     left: -84px; 
+  } */
 
   .container .middle-part {
     margin-top: 12%;
