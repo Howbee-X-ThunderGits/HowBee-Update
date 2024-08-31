@@ -131,8 +131,8 @@
   .para2 {
     font-family: "Fasthand";
     position: absolute;
-    top: 0rem;
-    right: -60%;
+    top: -3rem;
+    right: -80%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -148,11 +148,14 @@
   .para2 img {
     width: 12%;
     position: absolute;
+    right:  90%;
+    top: 70%;
   }
 
   .para2 .tagline {
     width: 70%;
     text-align: center;
+    
   }
 
   .tagline span {
@@ -169,8 +172,8 @@
   .para3 {
     font-family: "Fasthand";
     position: absolute;
-    top: 35vh;
-    right: -200px;
+    top: 37vh;
+    right: -150px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;

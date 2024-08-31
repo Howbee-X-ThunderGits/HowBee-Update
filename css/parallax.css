@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fasthand&family=Felipa&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +13,13 @@
 body {
   position: relative;
 }
+
 .Parallex {
   width: 100vw;
   height: 100vh;
-
   overflow-y: scroll;
   overflow-x: hidden;
-  transition: all ease-in-out 1s;
+  transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .section1,
@@ -23,6 +27,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
 .section1 .upper-text {
   width: auto;
   position: relative;
@@ -44,6 +49,7 @@ body {
     font-family: "Fasthand", cursive;
   }
 }
+
 .section1 .middle-text {
   padding-left: 8px;
   border-bottom: 2px solid black;
@@ -54,11 +60,11 @@ body {
     animation: AnimatedText 2s ease forwards;
   }
 }
+
 .section1 .next-middle {
   display: flex;
   justify-content: space-between;
   padding-right: 100px;
-
   p {
     font-size: 36px;
     font-family: "Fasthand", cursive;
@@ -69,13 +75,11 @@ body {
 @keyframes AnimatedText {
   0% {
     opacity: 0;
-    transform: translateY(-100px);
-    transform: translateX(-100px);
+    transform: translateY(-100px) translateX(-100px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
-    transform: translateX(0px);
+    transform: translateY(0) translateX(0);
   }
 }
 
@@ -97,19 +101,19 @@ body {
     font-family: "Fasthand", cursive;
   }
 }
+
 .section2 .middle-text2 {
   padding-left: 8px;
   border-bottom: 2px solid white;
 }
+
 .section2 .next-middle2 {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: space-between;
   gap: 50px;
-
   justify-content: flex-end;
-
   p {
     text-align: end;
     padding-right: 20px;
@@ -118,9 +122,9 @@ body {
     font-family: "Fasthand", cursive;
   }
 }
+
 .section2 .bottom-text-container {
   z-index: 100;
-
   h1 {
     padding-left: 20%;
     font-weight: 300;
@@ -130,11 +134,11 @@ body {
   span {
     font-size: 50px;
     color: #ffdc2e;
-    font-weight: 00;
+    font-weight: 400;
     z-index: 100;
   }
   p {
-    font-family: "litrate", serif;
+    font-family: "Literata", serif;
     font-size: 25px;
     font-weight: 100;
     color: white;
@@ -187,69 +191,75 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  transition: filter 0.5s ease;
+  perspective: 1000px;
 }
 
 .theme .mountain-Container1 {
   position: absolute;
   bottom: 0;
-  z-index: 0;
-
   width: 100%;
   height: 520px;
-  z-index: -100;
   background: url("../assets/parallax/mountain1.png") no-repeat center bottom;
-  background-size: 100% 100%;
-  transition: transform 0.5s ease;
-}
-.theme .bottom-stone1 {
-  position: absolute;
-  bottom: 0;
-
-  width: 100%;
-  height: 300px;
-  background: url("../assets/parallax/bottomStone1.png") no-repeat center bottom;
-  background-size: 100% 100%;
-}
-.theme .bottom-stone2 {
-  position: absolute;
-  bottom: 0;
-
-  width: 100%;
-  height: 300px;
-  background: url("../assets/parallax/bottomStone2.png") no-repeat center bottom;
-  background-size: 100% 100%;
+  background-size: cover;
+  transform: scale(1) translateY(0);
+  transition: transform 3s ease-in-out, opacity 3s ease-in-out;
+  z-index: -100;
 }
 
 .theme .mountain-Container2 {
   position: absolute;
   bottom: 0;
-  z-index: 0;
-
   width: 100%;
   height: 520px;
+  background: url("../assets/parallax/mountain2.png") no-repeat center bottom;
+  background-size: cover;
+  transform: scale(1.2) translateY(10%);
+  opacity: 0;
+  transition: transform 3s ease-in-out, opacity 3s ease-in-out;
   z-index: -100;
-  background: url("../assets//parallax/mountain2.png") no-repeat center bottom;
-  background-size: 100% 100%;
-  transition: transform 0.5s ease;
+}
+
+.theme .bottom-stone1,
+.theme .bottom-stone2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+}
+
+.theme .bottom-stone1 {
+  background: url("../assets/parallax/bottomStone1.png") no-repeat center bottom;
+}
+
+.theme .bottom-stone2 {
+  background: url("../assets/parallax/bottomStone2.png") no-repeat center bottom;
 }
 
 .theme .bird-container {
   position: absolute;
-  bottom: 150px;
-  transform: rotate(-80deg);
+  bottom: 260px;
   right: 100px;
-
+  transform: rotate(-80deg);
   .bird {
     height: 40px;
     width: 70px;
-    z-index: -10;
-
+    background: url("../assets/parallax/Bird.svg") no-repeat;
     margin: 100px;
     transform: rotate(80deg);
-    background: url("../assets/parallax/Bird.svg") no-repeat;
+    animation: birdFlap 2s infinite;
     transition: opacity 0.5s ease;
+    z-index: -10;
   }
 }
+
+@keyframes birdFlap {
+  0% { transform: rotate(80deg) translateY(0); }
+  50% { transform: rotate(80deg) translateY(-10px); }
+  100% { transform: rotate(80deg) translateY(0); }
+}
+
 .theme .sun {
   height: 100px;
   width: 100px;
@@ -261,3 +271,5 @@ body {
   left: 80px;
   transition: width 0.5s ease, height 0.5s ease;
 }
+
+/* JavaScript-triggered transition */
