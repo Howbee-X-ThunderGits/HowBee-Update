@@ -355,9 +355,10 @@ header p {
   .left2 {
     bottom: 25%;
     position: absolute;
-    font-size: 15px;
+    font-size: 13px;
     z-index: -1;
     font-family: "DM Sans";
+    text-align: end;
   }
 }
 }
