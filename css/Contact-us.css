@@ -60,7 +60,7 @@ body {
 .vertical-hr {
   transform: rotate(90deg);
   z-index: 10;
-  right: 40px;
+  margin-left: 70px;
 }
 
 .upside-text {
@@ -206,9 +206,10 @@ body {
 .btn button {
   background-color: #ffdc2e;
   border: none;
+  font-size: 1.2rem;
   padding: 10px 20px;
   border-radius: 10px;
-  margin-left: 120px;
+  margin-left: 90px;
   cursor: pointer;
 }
 
@@ -217,6 +218,7 @@ body {
 }
 
 .so-icons {
+
   margin-top: 40px;
   display: flex;
   gap: 3px;
@@ -224,10 +226,11 @@ body {
 }
 
 .so-icons a {
-  margin: 5px;
+  margin: 7px;
 }
 
 .so-icons a i {
+  font-size: 1.5rem;
   color: black;
 }
 
