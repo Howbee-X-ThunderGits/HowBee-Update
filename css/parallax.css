@@ -205,8 +205,8 @@ body {
 
 .theme .bird-container {
   position: absolute;
-  bottom: 150px;
-  right: 100px;
+  bottom: 200px;
+  right:  180px;
   transform: rotate(-80deg);
   .bird {
     height: 40px;
